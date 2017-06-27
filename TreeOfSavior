@@ -1,0 +1,12 @@
+#depts for wine and lol. lib32-libldap is arch specific (check?)
+sudo pacman -S --needed --noconfirm lib32-libldap alsa-lib gnutls lcms2 lib32-alsa-lib lib32-gnutls lib32-lcms2 lib32-libldap lib32-mpg123 libldap mpg123 gendesk icoutils imagemagick alsa-plugins lib32-alsa-plugins lib32-libpulse libpulse openal lib32-openal
+
+export WINEPREFIX=~/games/TreeOfSavior
+winetricks steam -v d3dx9_36 corefonts
+
+#start steam with modifier steam://run/372000 - the internal browser is not working, but you can skip it this way
+wine '/home/personal/games/steam-wine/drive_c/Program Files (x86)/Steam/Steam.exe'  steam://run/372000
+winetricks  d3dx9_36 vcrun2015 msxml3 vcrun2010 flash
+
+#start through steam
+wine '/home/personal/games/steam-wine/drive_c/Program Files (x86)/Steam/Steam.exe'
